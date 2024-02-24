@@ -33,3 +33,33 @@
     font-size: 30px;
     color: #fff;
 }
+
+.password_main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right , #fac404,blue);
+    width: 300px;
+    margin: 120px auto 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.password_main input{
+
+    width: 200px;
+    padding: 10px 0 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+
+.password_main button{
+
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 16px;
+}

@@ -7,6 +7,8 @@ function App() {
  
   let [error , seterror] = useState("");
 
+  let [passShow , setpassshow] = useState(false)
+
   let handleincrement = () =>{
 
         if (count >= 10){
@@ -38,6 +40,19 @@ function App() {
     }
   }
 
+//  password section
+
+let handleShow = () =>{
+
+  if(passShow){
+    setpassshow(false)
+  }
+  else{
+    setpassshow(true)
+  }
+
+}
+
   return (
     <>
 
@@ -46,9 +61,9 @@ function App() {
           {count >= 10 
 
           ?
-          <button className="btn disable">Increment</button>
+            <button className="btn disable">Increment</button>
           :
-          <button className="btn" onClick={handleincrement}>Increment</button>
+            <button className="btn" onClick={handleincrement}>Increment</button>
           }
 
           <p>{count}</p>
@@ -56,13 +71,18 @@ function App() {
           {count <= 0
 
           ?
-          <button className="btn disable">Decrement</button>
+            <button className="btn disable">Decrement</button>
           :
             <button className="btn" onClick={handledecrement}>Decrement</button>
           }
      </div>
      
-     
+      <div className="password_main">
+
+          <input type={passShow ? "text" : "password"} placeholder="Enter Your Password"/>
+          <button onClick={handleShow}>{passShow ? "hide" : "show"}</button>
+          
+      </div>
     </>
   )
 }
